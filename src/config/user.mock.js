@@ -128,6 +128,7 @@ export const defaultPermissions = {
     {
       id: "adminSetting",
       path: "/admin/:adminType",
+      validPathnames: ["/admin/org"],
       actions: {
         CREATE: true,
         READ: true,
@@ -135,16 +136,16 @@ export const defaultPermissions = {
         DELETE: true,
       },
     },
-    // {  No Access to this page so removing this from array
-    //   id: "admin",
-    //   path: "/admin",
-    //   actions: {
-    //     CREATE: true,
-    //     READ: true,
-    //     UPDATE: true,
-    //     DELETE: true,
-    //   },
-    // },
+    {
+      id: "admin",
+      path: "/admin",
+      actions: {
+        CREATE: true,
+        READ: true,
+        UPDATE: true,
+        DELETE: true,
+      },
+    },
     {
       id: "singleOrg",
       path: "/org/:orgId",
@@ -190,6 +191,7 @@ export const defaultPermissions = {
     {
       id: "adminSetting",
       path: "/admin/:adminType",
+      validPathnames: ["/admin/org"],
       actions: {
         CREATE: false,
         READ: true,
@@ -197,16 +199,16 @@ export const defaultPermissions = {
         DELETE: false,
       },
     },
-    // {  No Access to this page so removing this from array
-    //   id: "admin",
-    //   path: "/admin",
-    //   actions: {
-    //     CREATE: true,
-    //     READ: true,
-    //     UPDATE: true,
-    //     DELETE: true,
-    //   },
-    // },
+    {
+      id: "admin",
+      path: "/admin",
+      actions: {
+        CREATE: true,
+        READ: true,
+        UPDATE: true,
+        DELETE: true,
+      },
+    },
     {
       id: "singleOrg",
       path: "/org/:orgId",
@@ -314,6 +316,7 @@ export const defaultPermissions = {
     {
       id: "adminSetting",
       path: "/admin/:adminType",
+      validPathnames: ["/admin/sp"],
       actions: {
         CREATE: true,
         READ: true,
@@ -321,17 +324,17 @@ export const defaultPermissions = {
         DELETE: true,
       },
     },
-    // {  No Access to this page so removing this from array
-    //   id: "admin",
-    //   path: "/admin",
-    //   actions: {
-    //     CREATE: true,
-    //     READ: true,
-    //     UPDATE: true,
-    //     DELETE: true,
-    //   },
-    // },
-    // {
+    {
+      id: "admin",
+      path: "/admin",
+      actions: {
+        CREATE: false,
+        READ: true,
+        UPDATE: true,
+        DELETE: false,
+      },
+    },
+    // {No Access to this page so removing this from array
     //   id: "singleOrg",
     //   path: "/org/:orgId",
     //   actions: {
@@ -439,7 +442,7 @@ export const defaultPermissions = {
 export const mockUsers = [
   {
     name: "Robin",
-    role: ROLES.SPUSER,
-    permissions: defaultPermissions?.[ROLES.SPUSER],
+    role: ROLES.SPAD,
+    permissions: defaultPermissions?.[ROLES.SPAD],
   },
 ];
